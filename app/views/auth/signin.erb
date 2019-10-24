@@ -1,0 +1,8 @@
+<ul id="signin">
+<%= flash[:message] %>
+<%= form_for :auth do |f| %>
+ User name: <%= f.text_field :username %><br>
+ Zip code: <%= f.number_field :zip_cide %>
+  <%= f.submit "Login" %>
+<% end %>
+</ul>

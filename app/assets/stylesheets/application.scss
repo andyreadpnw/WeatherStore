@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @font-face {
+    font-family:"EraserDust";
+    src: asset-url('EraserDust/.ttf') format('truetype')
+}
+html,
+body {
+    height: 100%;
+    background-image: url("seattle.jpg");
+    background-repeat:no-repeat;
+    background-size: 1600px;
+    background-color: grey;
+    font-family: EraserDust;
+    color: black
+}
+#ui teal inverted menu {
+    font-size:7vw;
+    margin-bottom:15%
+}
+#signin {
+    padding:20%;
+    height:50%;
+    font-size:10.8vw
+}
+
+#productsForm {
+    padding:10%;
+    height:25%;
+    font-size:2.8vw;
+    input {
+        width: 60px;
+      }
+}
+
+#productBox {
+    background-color: slategray;
+    width: 350px;
+    margin: 20px;
+    text-align:center
+}
+
+#cartForm {
+    font-size:4.8vw;
+    background-color: slategray;
+    width: 120px;
+    height: 50px;
+    margin: 20px;
+}

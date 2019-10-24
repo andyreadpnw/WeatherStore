@@ -1,0 +1,9 @@
+<h1>All Users</h1>
+
+<div class= 'ui huge middle aligned selection divided list'>
+  <% @user.each do |user| %>
+    <div class="item">
+      <%= link_to user.username, users_path(user) %>
+    </div>
+  <% end %>
+</div>

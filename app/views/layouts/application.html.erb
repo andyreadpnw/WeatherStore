@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Weather E-Commerce</title>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <div class="ui teal inverted menu">
+    <a href="/" class="item">
+      <h1>Weather E-Commerce Hot</h1>
+    </a>
+      <div class="right menu">
+        <% if !logged_in? %>
+          <%= link_to 'Create a New User', new_users_path, {class: 'item'} %>
+          <%= link_to "Logout", logout_path, {class: 'item'} %>
+        <% end %>
+      </div>
+  </div>
+  <body>
+    <div class="ui centered grid ">
+      <div class="eight wide column">
+
+        <%= yield %>
+
+      </div>
+    </div>
+  </body>
+</html>

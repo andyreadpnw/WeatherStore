@@ -1,0 +1,6 @@
+<h1>Edit Products</h1>
+<%= form_for @product do |f| %>
+    Name: <%= f.text_field :name %><br />
+    Price : <%= f.number_field :price %><br />
+    <%= f.submit %>
+  <% end %>

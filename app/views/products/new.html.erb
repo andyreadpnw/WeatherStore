@@ -1,0 +1,8 @@
+<h1>New Product</h1>
+<%= form_for @product do |f| %>
+    Name: <%= f.text_field :name %><br />
+    Price : <%= f.number_field :price %><br />
+    Weather Type : <%= f.text_field :weather_type %><br />
+    Image Name : <%= f.text_field :image_name %><br />
+    <%= f.submit %>
+  <% end %>
