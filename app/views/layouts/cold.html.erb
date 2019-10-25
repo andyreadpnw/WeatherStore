@@ -9,22 +9,26 @@
   </head>
 
   <div class="ui teal inverted menu">
-    <a href="/" class="item">
       <h1>Weather E-Commerce Cold</h1>
-    </a>
-      <div class="right menu">
-        <% if !logged_in? %>
-          <%= link_to 'Create a New User', new_users_path, {class: 'item'} %>
-          <%= link_to "Logout", logout_path, {class: 'item'} %>
-        <% end %>
+    <style>
+</style>
+      <div class="rightmenu">
+      <% if !logged_in? %>
+      <%= link_to 'Create a New User', new_user_path, {class: 'item'} %>
+      <%= link_to "Login", login_page_path, {class: 'item'} %>
+      <% else %>
+      <%= link_to 'Create a New User', new_user_path, {class: 'item'} %>
+      <%= link_to "Logout", logout_path, {class: 'item'} %>
+    <% end %>
       </div>
+  </div>
+  <div class="ProductBar">
+  <h3>Enjoy your Cold Products!</h3>
   </div>
   <body>
     <div class="ui centered grid ">
       <div class="eight wide column">
-
         <%= yield %>
-
       </div>
     </div>
   </body>

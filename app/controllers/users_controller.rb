@@ -17,8 +17,9 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
   
       if @user.save
-        redirect_to user_path(@user)
+       redirect_to user_path(@user)
       else
+        flash[:message] = "Incorrect Info, please try again."
         render :new
       end
   

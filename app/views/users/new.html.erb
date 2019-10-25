@@ -1,5 +1,5 @@
 <h1>Create a User</h1>
-
+<%= flash[:message] %>
 <%= form_for @user, html: {class: 'ui form'} do |f| %>
   <div class="field">
     <%= f.text_field(:username, placeholder: 'Enter your username...') %>
@@ -7,5 +7,7 @@
   <div class="field">
     <%= f.text_field :zip_code, placeholder: 'Enter your Zip Code...' %>
   </div>
-  <%= f.submit({class: 'ui huge pink button'}) %>
+  <%= f.submit({class: 'ui huge pink button'}) %><br>
+  <br>
+  <%= button_to "Return to Products Page", products_path, method: :get %><br>
 <% end %>

@@ -4,6 +4,7 @@
   <% @user.each do |user| %>
     <div class="item">
       <%= link_to user.username, users_path(user) %>
+      <%= button_to "Return to Products Page", products_path, method: :get %><br>
     </div>
   <% end %>
 </div>

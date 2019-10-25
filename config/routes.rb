@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   
   resources :products, :order_items
   resource :cart, only: [:show]
-  resource :users
+  resources :users
+  resources :orders
 
   get '/signup', to: "users#new"
   post '/signup', to: "users#create"
@@ -16,5 +17,6 @@ Rails.application.routes.draw do
   get '/logout', to: "auth#logout" 
 
   get '/cart/:id', to: "order_items#destroy", as: "delete_item"
+  get '/cart/:id', to: "order_items#create", as: "create_order"
   
 end
